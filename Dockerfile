@@ -36,7 +36,7 @@ RUN apt-get clean && \
     procps \
     curl \
     && rm -rf /var/lib/apt/lists/*
-RUN pip install uv
+RUN pip install uv -i https://mirrors.aliyun.com/pypi/simple/
 
 # 最终运行阶段
 FROM docker.m.daocloud.io/library/python:3.11-slim
